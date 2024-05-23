@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <a href="/login">Login</a> | <a href="/signup">Sign Up</a>
+
+    <div class="container">
+        <h1>Patients</h1>
+        <div class="cards">
+            {% for patient in patients %}
+            <div class="card">
+                <h2>{{ patient.full_name }}</h2>
+                <p><strong>Date of Birth:</strong> {{ patient.date_of_birth }}</p>
+                <p><strong>Phone:</strong> {{ patient.phone }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

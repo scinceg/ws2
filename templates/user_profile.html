@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user-info">
+                <p>Welcome, {{ username }}</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="user-details">
+                <h2>User Details</h2>
+                {% for patient in patients %}
+                <div class="patient">
+                    <p><strong>Full Name:</strong> {{ patient.full_name }}</p>
+                    <p><strong>Date of Birth:</strong> {{ patient.date_of_birth }}</p>
+                    <p><strong>Phone:</strong> {{ patient.phone }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
